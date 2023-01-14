@@ -31,7 +31,7 @@
 
 .about__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -68,6 +68,11 @@
 .about__content p {
   margin: 2rem 0 2.6rem;
   color: var(--color-light);
+  text-align: justify;
+}
+
+.about__button {
+  text-align: center;
 }
 
 /* ================ MEDIA QUERIES (MEDIUM DEVICES) ================= */

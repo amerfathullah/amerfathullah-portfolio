@@ -40,6 +40,10 @@
   font-size: 0.8rem;
 }
 
+.contact__button {
+  text-align: center;
+}
+
 /* ================= FORM ================== */
 form {
   display: flex;

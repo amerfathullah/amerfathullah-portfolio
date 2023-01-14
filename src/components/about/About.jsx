@@ -3,7 +3,7 @@ import './about.css'
 import ME from '../../assets/me-about.jpg'
 import {FaAward} from 'react-icons/fa'
 import {FiGitCommit} from 'react-icons/fi'
-import {VscFolderLibrary} from 'react-icons/vsc'
+// import {VscFolderLibrary} from 'react-icons/vsc'
 
 const About = () => {
   return (
@@ -32,11 +32,11 @@ const About = () => {
               <small>500+ Commits</small>
             </article>
 
-            <article className='about__card'>
+            {/* <article className='about__card'>
               <VscFolderLibrary className='about__icon'/>
               <h5>Projects</h5>
               <small>10+ Completed</small>
-            </article>
+            </article> */}
           </div>
 
           <p>
@@ -48,7 +48,9 @@ const About = () => {
            and learning new technologies and tools.
           </p>
 
-          <a href="#contact" className='btn btn-primary'>Let's Talk</a>
+          <div className='about__button'>
+            <a href="#contact" className='btn btn-primary'>Let's Talk</a>
+          </div>
         </div>
       </div>
     </section>
