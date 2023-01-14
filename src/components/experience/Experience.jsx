@@ -1,106 +1,26 @@
 import React from 'react'
 import './experience.css'
-import {BsPatchCheckFill} from 'react-icons/bs'
 
-const Experience = () => {
+const Skills = () => {
   return (
     <section id='experience'>
-      <h5>What Skills I Have</h5>
-      <h2>My Experience</h2>
+      <h5>Where Have I Worked Before</h5>
+      <h2>My Work Experiences</h2>
       
-      <div className="container experience__container">
-        <div className="experience__frontend">
-          <h3>Frontend Development</h3>
-          <div className="experience__content">
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon' />
-              <div>
-                <h4>HTML</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon' />
-              <div>
-                <h4>CSS</h4>
-                <small className='text-light'>Intermediate</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon' />
-              <div>
-                <h4>JavaScript</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon' />
-              <div>
-                <h4>Bootstrap</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon' />
-              <div>
-                <h4>Tailwind</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon' />
-              <div>
-                <h4>React</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-          </div>
-        </div>
-        {/* END OF FRONTEND */}
-
-        <div className="experience__backend">
-        <h3>Backend Development</h3>
-          <div className="experience__content">
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon' />
-              <div>
-                <h4>Node JS</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon' />
-              <div>
-                <h4>MongoDB</h4>
-                <small className='text-light'>Intermediate</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon' />
-              <div>
-                <h4>PHP</h4>
-                <small className='text-light'>Intermediate</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon' />
-              <div>
-                <h4>MySQL</h4>
-                <small className='text-light'>Basic</small>
-              </div>
-            </article>
-            <article className='experience__details'>
-              <BsPatchCheckFill className='experience__details-icon' />
-              <div>
-                <h4>Python</h4>
-                <small className='text-light'>Experienced</small>
-              </div>
-            </article>
-          </div>
+      <div className="container about__container">
+        <div className="about__content">
+          <p>
+          Full Stack Developer at fin-tech company TFX Islamic Sdn Bhd. Have developed the procurement module which is a part of the Enterprise Resource Planning (ERP) project 
+          in the company. 2+ years of diverse software engineering experience such as front-end development, back-end development, mobile development and machine learning.
+          </p>
+          <p>
+          Love to work in a team, continuous learning and agile environment. Interested in writing cleaner code, devising a better problem-solving method for challenging tasks,
+           and learning new technologies and tools.
+          </p>
         </div>
       </div>
     </section>
   )
 }
 
-export default Experience
+export default Skills
