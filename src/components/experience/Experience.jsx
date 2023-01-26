@@ -1,7 +1,7 @@
 import React from 'react'
 import './experience.css'
 
-const Skills = () => {
+const Experience = () => {
   return (
     <section id='experience'>
       <h5>Where Have I Worked Before</h5>
@@ -23,4 +23,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default Experience
