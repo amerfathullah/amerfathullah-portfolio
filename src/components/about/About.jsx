@@ -40,7 +40,7 @@ const About = () => {
           </div>
 
           <p>
-          Full Stack Developer at fin-tech company TFX Islamic Sdn Bhd. Have developed the procurement module which is a part of the Enterprise Resource Planning (ERP) project 
+          Full Stack Developer and currently working at TFX Islamic Sdn Bhd, a local fin-tech company. Have developed the procurement module which is a part of the Enterprise Resource Planning (ERP) project 
           in the company. 2+ years of diverse software engineering experience such as front-end development, back-end development, mobile development and machine learning.
           </p>
           <p>
