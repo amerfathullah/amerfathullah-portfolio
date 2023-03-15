@@ -52,8 +52,13 @@ const App = () => {
   return (
     <>
         <Helmet>
+          <meta name="description" content="Hi, I'm Amer Fathullah. A software developer from Malaysia." />
           <link rel="canonical" href="https://amerfathullah.com" />
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+          <meta property="og:title" content="Amer Fathullah" />
+          <meta property="og:description" content="Hi, I'm Amer Fathullah. A software developer from Malaysia." />
+          <meta property="og:image" content="https://amerfathullah.com/static/media/me-about.51fb11cf969c73f7e273.jpg" />
+          <meta property="og:url" content="https://amerfathullah.com/" />
         </Helmet>
         {isValidPage ? (
           <>
