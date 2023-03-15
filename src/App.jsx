@@ -6,7 +6,6 @@ import Skills from './components/skills/Skills'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 import NotFoundPage from './components/notFoundPage/NotFoundPage'
-import { Helmet } from 'react-helmet';
 
 const App = () => {
   const [isValidPage, setIsValidPage] = useState(true);
