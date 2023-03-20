@@ -1,38 +1,39 @@
 /* eslint-disable no-restricted-globals */
-const CACHE_NAME = 'my-site-cache-v1';
-const urlsToCache = [
-  '/',
-  '/styles.css',
-  '/app.js',
-  '/favicon.ico',
-  '/offline.html'
-];
+const cacheName = "kaldiPWA-v1";
+const filesToCache = ["index.html"];
 
-self.addEventListener('install', event => {
+self.addEventListener("install", function(event) {
+  // Perform install steps
+  console.log("[Servicework] Install");
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+    caches.open(cacheName).then(function(cache) {
+      console.log("[ServiceWorker] Caching app shell");
+      return cache.addAll(filesToCache);
+    })
   );
 });
 
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        if (response) {
-          return response;
+self.addEventListener("activate", function(event) {
+  console.log("[Servicework] Activate");
+  event.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== cacheName) {
+          console.log("[ServiceWorker] Removing old cache shell", key);
+          return caches.delete(key);
         }
-        return fetch(event.request)
-          .then(response => {
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-            const responseToCache = response.clone();
-            caches.open(CACHE_NAME)
-              .then(cache => cache.put(event.request, responseToCache));
-            return response;
-          });
-      })
-      .catch(() => caches.match('/offline.html'))
+        else return caches.delete(key);
+      }));
+    })
   );
+});
+
+self.addEventListener("fetch", (event) => {
+  console.log("[ServiceWorker] Fetch");
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
+
 });
