@@ -19,7 +19,6 @@ const Nav = () => {
               const rootRect = root.getBoundingClientRect()
               const section = document.getElementById(sectionId)
               const sectionRect = section.getBoundingClientRect()
-              console.log(section, sectionRect)
               if (sectionRect.top <= 1 && sectionRect.bottom >= 0) {
                 setActiveNav('#' + sectionId)
               }
