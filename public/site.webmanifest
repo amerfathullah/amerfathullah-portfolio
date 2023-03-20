@@ -59,6 +59,6 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "start_url": "https://amerfathullah.com/",
+    "start_url": ".",
     "display": "standalone"
 }
