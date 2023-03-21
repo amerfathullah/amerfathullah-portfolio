@@ -1,6 +1,11 @@
 import React from 'react'
 import './about.css'
 import ME from '../../assets/me-about.webp'
+import ME256 from '../../assets/me-about-256.webp'
+import ME790 from '../../assets/me-about-790.webp'
+import ME1120 from '../../assets/me-about-1120.webp'
+import ME1370 from '../../assets/me-about-1370.webp'
+import ME1580 from '../../assets/me-about-1580.webp'
 import {FaAward} from 'react-icons/fa'
 import {FiGitCommit} from 'react-icons/fi'
 // import {VscFolderLibrary} from 'react-icons/vsc'
@@ -14,7 +19,27 @@ const About = () => {
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
-            <img src={ME} alt="About Me" width="100%" height="auto" />
+          <img
+            srcSet={`
+              ${ME256} 256w,
+              ${ME790} 790w,
+              ${ME1120} 1120w,
+              ${ME1370} 1370w,
+              ${ME1580} 1580w,
+              ${ME} 3203w
+            `}
+            sizes="
+              (max-width: 600px) 256px,
+              (max-width: 1000px) 790px,
+              (max-width: 1200px) 1120px,
+              (max-width: 1400px) 1370px,
+              1580px
+            "
+            src={ME}
+            alt="About Me"
+            width="100%"
+            height="auto"
+          />
           </div>
         </div>
 
