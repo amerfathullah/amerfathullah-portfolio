@@ -23,10 +23,7 @@ const Header = () => {
               ${ME608} 608w,
               ${ME} 1080w
             `}
-            sizes="
-              (max-width: 600px) 304px,
-              608px
-            "
+            sizes="(min-width: 620px) 304px, (min-width: 420px) 272px, 66vw"
             src={ME}
             alt="Me"
             width="100%"

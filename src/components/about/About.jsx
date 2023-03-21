@@ -28,13 +28,7 @@ const About = () => {
               ${ME1580} 1580w,
               ${ME} 3203w
             `}
-            sizes="
-              (max-width: 600px) 256px,
-              (max-width: 1000px) 790px,
-              (max-width: 1200px) 1120px,
-              (max-width: 1400px) 1370px,
-              1580px
-            "
+            sizes="(min-width: 1040px) 26.28vw, (min-width: 640px) 43.16vw, (min-width: 420px) calc(10.5vw + 202px), calc(16vw + 170px)"
             src={ME}
             alt="About Me"
             width="100%"
