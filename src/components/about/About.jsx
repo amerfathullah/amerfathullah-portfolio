@@ -31,7 +31,7 @@ const About = () => {
             sizes="(min-width: 1040px) 26.28vw, (min-width: 640px) 43.16vw, (min-width: 420px) calc(10.5vw + 202px), calc(16vw + 170px)"
             src={ME}
             alt="About Me"
-            width="100%"
+            width="3202"
             height="auto"
           />
           </div>

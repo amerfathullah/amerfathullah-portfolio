@@ -26,7 +26,7 @@ const Header = () => {
             sizes="(min-width: 620px) 304px, (min-width: 420px) 272px, 66vw"
             src={ME}
             alt="Me"
-            width="100%"
+            width="1080"
             height="auto"
           />
         </div>
