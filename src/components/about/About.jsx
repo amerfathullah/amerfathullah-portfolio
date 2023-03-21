@@ -26,7 +26,7 @@ const About = () => {
               ${ME1120} 1120w,
               ${ME1370} 1370w,
               ${ME1580} 1580w,
-              ${ME} 3203w
+              ${ME} 3202w
             `}
             sizes="(min-width: 1040px) 26.28vw, (min-width: 640px) 43.16vw, (min-width: 420px) calc(10.5vw + 202px), calc(16vw + 170px)"
             src={ME}
