@@ -1,6 +1,7 @@
 {
     "name": "Amer Fathullah",
     "short_name": "Amer Fathullah",
+    "description": "Hi! I'm Amer Fathullah Nuaim bin Zakaria, a Full-Stack Software Developer based in Malaysia.",
     "icons": [
         {
             "src": "/android-chrome-36x36.png",
@@ -57,8 +58,8 @@
             "purpose": "any maskable"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "background_color": "#000000",
     "start_url": ".",
     "display": "standalone"
 }
