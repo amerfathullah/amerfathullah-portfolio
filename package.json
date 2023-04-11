@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ampproject/toolbox-optimizer": "^2.9.0",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -32,7 +33,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && node ./node_modules/@ampproject/toolbox-optimizer/index.js --src ./build --dest ./build --cacheDir ./cache",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postbuild": "react-snap"
