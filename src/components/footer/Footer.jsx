@@ -27,7 +27,7 @@ const Footer = () => {
       </div>
 
       <div className="footer__copyright">
-        <small>&copy; Amer Fathullah. All rights reserved.</small>
+        <small>&copy; Copyright ©️ 2024 Amer Fathullah. All rights reserved.</small>
       </div>
     </footer>
   )
