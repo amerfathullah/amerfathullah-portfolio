@@ -69,4 +69,36 @@ self.addEventListener('message', (event) => {
   }
 });
 
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    clients.claim().then(() => {
+      return clients.matchAll({ type: 'window' }).then(windowClients => {
+        for (let client of windowClients) {
+          client.navigate(client.url);
+        }
+      });
+    })
+  );
+});
+
+// Cache CSS and JS files with Stale-While-Revalidate strategy
+registerRoute(
+  ({ request }) => request.destination === 'script' || request.destination === 'style',
+  new StaleWhileRevalidate()
+);
+
+// Cache images with Cache-First strategy
+registerRoute(
+  ({ request }) => request.destination === 'image',
+  new CacheFirst({
+    cacheName: 'images',
+    plugins: [
+      new ExpirationPlugin({
+        maxEntries: 50,
+        maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+      }),
+    ],
+  })
+);
+
 // Any other custom service worker logic can go here.
