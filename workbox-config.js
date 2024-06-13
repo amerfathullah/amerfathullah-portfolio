@@ -1,4 +1,8 @@
 const { ExpirationPlugin } = require('workbox-expiration');
+const { clientsClaim } = require('workbox-core');
+const { precacheAndRoute, createHandlerBoundToURL } = require('workbox-precaching');
+const { registerRoute } = require('workbox-routing');
+const { StaleWhileRevalidate, CacheFirst } = require('workbox-strategies');
 
 module.exports = {
   globDirectory: 'build/',
@@ -11,16 +15,21 @@ module.exports = {
   runtimeCaching: [
     {
       urlPattern: ({ request, url }) => {
+        // Return false to exempt requests from being fulfilled by index.html.
+        // If this isn't a navigation, skip.
         if (request.mode !== 'navigate') {
           return false;
         } 
+        // If this is a URL that starts with /_, skip.
         if (url.pathname.startsWith('/_')) {
           return false;
-        }
+        } 
+        // If this looks like a URL for a resource, because it contains a file extension, skip.
         const fileExtensionRegexp = new RegExp('/[^/?]+\\.[^/]+$');
         if (url.pathname.match(fileExtensionRegexp)) {
           return false;
-        }
+        } 
+        // Return true to signal that we want to use the handler.
         return true;
       },
       handler: 'NetworkFirst',
