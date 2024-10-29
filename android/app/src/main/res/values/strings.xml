@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">Amer Fathullah</string>
-    <string name="title_activity_main">Amer Fathullah</string>
-    <string name="package_name">com.amerfathullah.amerfathullah</string>
-    <string name="custom_url_scheme">com.amerfathullah.amerfathullah</string>
-</resources>
