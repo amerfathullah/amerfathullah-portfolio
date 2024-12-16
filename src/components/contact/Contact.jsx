@@ -19,27 +19,27 @@ const Contact = () => {
 
   return (
     <section id='contact'>
-      <h5>Get In Touch</h5>
+      <p>Get In Touch</p>
       <h2>Contact Me</h2>
 
       <div className="container contact__container">
         <div className="contact__options">
           <article className="contact__option">
             <MdOutlineEmail className='contact__option-icon'/>
-            <h4>Email</h4>
-            <h5>amerfathullah@gmail.com</h5>
+            <h3>Email</h3>
+            <h4 style={{ color: 'var(--color-light)' }}>amerfathullah@gmail.com</h4>
             <a href="mailto:amerfathullah@gmail.com" target="_blank" rel="noreferrer">Send a message</a>
           </article>
           <article className="contact__option">
             <RiLinkedinLine className='contact__option-icon'/>
-            <h4>LinkedIn</h4>
-            <h5>Amer Fathullah</h5>
+            <h3>LinkedIn</h3>
+            <h4 style={{ color: 'var(--color-light)' }}>Amer Fathullah</h4>
             <a href="https://www.linkedin.com/in/amerfathullah/" target="_blank" rel="noreferrer">Send a message</a>
           </article>
           <article className="contact__option">
             <BsWhatsapp className='contact__option-icon'/>
-            <h4>WhatsApp</h4>
-            <h5>+60105752992</h5>
+            <h3>WhatsApp</h3>
+            <h4 style={{ color: 'var(--color-light)' }}>+60105752992</h4>
             <a href="https://wa.me/60105752992" target="_blank" rel="noreferrer">Send a message</a>
           </article>
         </div>

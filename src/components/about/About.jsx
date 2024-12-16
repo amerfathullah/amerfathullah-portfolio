@@ -13,7 +13,7 @@ import {FiGitCommit} from 'react-icons/fi'
 const About = () => {
   return (
     <section id='about'>
-      <h5>Get To Know</h5>
+      <p className='text-center'>Get To Know</p>
       <h2>About Me</h2>
 
       <div className="container about__container">
@@ -41,19 +41,19 @@ const About = () => {
           <div className="about__cards">
             <article className='about__card'>
               <FaAward className='about__icon'/>
-              <h5>Experience</h5>
+              <p>Experience</p>
               <small>2+ Years Working</small>
             </article>
 
             <article className='about__card'>
               <FiGitCommit className='about__icon'/>
-              <h5>Contributions</h5>
+              <p>Contributions</p>
               <small>500+ Commits</small>
             </article>
 
             {/* <article className='about__card'>
               <VscFolderLibrary className='about__icon'/>
-              <h5>Projects</h5>
+              <p>Projects</p>
               <small>10+ Completed</small>
             </article> */}
           </div>
