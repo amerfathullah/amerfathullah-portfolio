@@ -1,26 +1,17 @@
-import App from './App'
-import './index.css'
-import { hydrate, render } from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
 // import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
 const rootElement = document.querySelector('#root');
 
-if (rootElement.hasChildNodes()) {
-    hydrate(<App />, rootElement);
-  } else {
-    render(<App />, rootElement);
-  }
+// Create a React root for hydration or rendering
+const root = ReactDOM.createRoot(rootElement);
 
-// if ('serviceWorker' in navigator) {
-//   window.addEventListener('load', function() {
-//     navigator.serviceWorker.register('/sw.js').then(function(registration) {
-//       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-//     }, function(err) {
-//       console.log('ServiceWorker registration failed: ', err);
-//     });
-//   });
-// }
+// Render the app
+root.render(<App />);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
