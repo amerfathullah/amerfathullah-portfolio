@@ -41,19 +41,19 @@ const About = () => {
           <div className="about__cards">
             <article className='about__card'>
               <FaAward className='about__icon'/>
-              <p>Experience</p>
+              <h3>Experience</h3>
               <small>2+ Years Working</small>
             </article>
 
             <article className='about__card'>
               <FiGitCommit className='about__icon'/>
-              <p>Contributions</p>
+              <h3>Contributions</h3>
               <small>500+ Commits</small>
             </article>
 
             {/* <article className='about__card'>
               <VscFolderLibrary className='about__icon'/>
-              <p>Projects</p>
+              <h3>Projects</h3>
               <small>10+ Completed</small>
             </article> */}
           </div>
