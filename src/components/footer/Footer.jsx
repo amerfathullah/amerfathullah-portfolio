@@ -5,6 +5,8 @@ import {FiInstagram} from 'react-icons/fi'
 import {IoLogoTwitter} from 'react-icons/io'
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer>
       <a href="#root" className='footer__logo'>AMER FATHULLAH</a>
@@ -27,7 +29,7 @@ const Footer = () => {
       </div>
 
       <div className="footer__copyright">
-        <small>&copy; Copyright ©️ 2024 Amer Fathullah. All rights reserved.</small>
+        <small>&copy; Copyright ©️ {currentYear} Amer Fathullah. All rights reserved.</small>
       </div>
     </footer>
   )
